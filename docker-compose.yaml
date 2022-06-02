@@ -1,0 +1,9 @@
+version: "3.8"
+services:
+  mysql:
+    build: ./mysql/
+    container_name: webmon-db
+    volumes:
+      - ./mysql/init:/docker-entrypoint-initdb.d:ro
+    ports:
+      - "3306:3306"

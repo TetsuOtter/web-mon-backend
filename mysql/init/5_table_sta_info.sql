@@ -27,24 +27,3 @@ CREATE TABLE station_stop_pos (
 		REFERENCES stations(id)
 		ON DELETE CASCADE
 );
-
-CREATE TABLE train_sta_opt_types LIKE train_opt_types;
-
-CREATE TABLE train_sta_opts (
-	train_id BIGINT UNSIGNED NOT NULL,
-	station_id BIGINT UNSIGNED NOT NULL,
-	opt_type BIGINT UNSIGNED NOT NULL,
-	opt_value VARCHAR(255) NOT NULL,
-
-	PRIMARY KEY (train_id, station_id, opt_type),
-
-	FOREIGN KEY (train_id)
-		REFERENCES trains(id)
-		ON DELETE CASCADE,
-	FOREIGN KEY (station_id)
-		REFERENCES stations(id)
-		ON DELETE CASCADE,
-	FOREIGN KEY (opt_type)
-		REFERENCES train_sta_opt_types(id)
-		ON DELETE CASCADE
-);

@@ -1,5 +1,7 @@
 CREATE DATABASE IF NOT EXISTS webmon;
 
+GRANT ALL ON webmon.* TO 'test'@'%';
+
 USE webmon;
 
 CREATE TABLE users (

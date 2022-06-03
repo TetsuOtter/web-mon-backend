@@ -15,7 +15,7 @@ CREATE TABLE `perm_read_line` (
   KEY `user_id` (`user_id`),
   CONSTRAINT `perm_read_line_ibfk_1` FOREIGN KEY (`train_line_id`) REFERENCES `train_lines` (`id`) ON DELETE CASCADE,
   CONSTRAINT `perm_read_line_ibfk_2` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COMMENT='access allow users list'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='access allow users list'
 ```
 
 </details>

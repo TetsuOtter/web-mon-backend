@@ -15,7 +15,7 @@ CREATE TABLE `b_works` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `office_id` (`office_id`,`work_name`),
   CONSTRAINT `b_works_ibfk_1` FOREIGN KEY (`office_id`) REFERENCES `offices` (`id`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=[Redacted by tbls] DEFAULT CHARSET=utf8mb3 COMMENT='B work (driver works)'
+) ENGINE=InnoDB AUTO_INCREMENT=[Redacted by tbls] DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='B work (driver works)'
 ```
 
 </details>

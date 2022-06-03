@@ -30,7 +30,7 @@ CREATE TABLE `sta_time` (
   CONSTRAINT `sta_time_ibfk_4` FOREIGN KEY (`radio_ch_id`) REFERENCES `radio_ch` (`id`),
   CONSTRAINT `sta_time_chk_1` CHECK ((`arr_time` >= _latin1'00:00:00')),
   CONSTRAINT `sta_time_chk_2` CHECK ((`dep_time` >= _latin1'00:00:00'))
-) ENGINE=InnoDB AUTO_INCREMENT=[Redacted by tbls] DEFAULT CHARSET=utf8mb3 COMMENT='station arrive/departure time etc.'
+) ENGINE=InnoDB AUTO_INCREMENT=[Redacted by tbls] DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='station arrive/departure time etc.'
 ```
 
 </details>

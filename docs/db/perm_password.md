@@ -20,7 +20,7 @@ CREATE TABLE `perm_password` (
   CONSTRAINT `perm_password_ibfk_1` FOREIGN KEY (`train_line_id`) REFERENCES `train_lines` (`id`) ON DELETE CASCADE,
   CONSTRAINT `perm_password_ibfk_2` FOREIGN KEY (`created_by`) REFERENCES `users` (`id`),
   CONSTRAINT `perm_password_chk_1` CHECK ((`expires_at` > _latin1'2020-01-01'))
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COMMENT='hashed password list for adding new accessible users'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='hashed password list for adding new accessible users'
 ```
 
 </details>

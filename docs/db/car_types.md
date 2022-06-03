@@ -16,7 +16,7 @@ CREATE TABLE `car_types` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `train_line_id` (`train_line_id`,`car_type_name`),
   CONSTRAINT `car_types_ibfk_1` FOREIGN KEY (`train_line_id`) REFERENCES `train_lines` (`id`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=[Redacted by tbls] DEFAULT CHARSET=utf8mb3 COMMENT='car types (e.g. Series 0 with 16 car length)'
+) ENGINE=InnoDB AUTO_INCREMENT=[Redacted by tbls] DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='car types (e.g. Series 0 with 16 car length)'
 ```
 
 </details>

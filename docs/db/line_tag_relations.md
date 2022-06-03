@@ -15,7 +15,7 @@ CREATE TABLE `line_tag_relations` (
   KEY `train_line_id` (`train_line_id`),
   CONSTRAINT `line_tag_relations_ibfk_1` FOREIGN KEY (`tag_id`) REFERENCES `line_tag_names` (`id`) ON DELETE CASCADE,
   CONSTRAINT `line_tag_relations_ibfk_2` FOREIGN KEY (`train_line_id`) REFERENCES `train_lines` (`id`) ON DELETE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COMMENT='relations between line and tag'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='relations between line and tag'
 ```
 
 </details>

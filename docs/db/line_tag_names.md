@@ -13,7 +13,7 @@ CREATE TABLE `line_tag_names` (
   `tag_name` varchar(255) NOT NULL COMMENT 'tag name to be displayed',
   `tag_description` text COMMENT 'tag description',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=[Redacted by tbls] DEFAULT CHARSET=utf8mb3 COMMENT='line tag name and descriptions'
+) ENGINE=InnoDB AUTO_INCREMENT=[Redacted by tbls] DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='line tag name and descriptions'
 ```
 
 </details>

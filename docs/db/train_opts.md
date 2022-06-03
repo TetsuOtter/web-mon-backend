@@ -17,7 +17,7 @@ CREATE TABLE `train_opts` (
   KEY `opt_type` (`opt_type`),
   CONSTRAINT `train_opts_ibfk_1` FOREIGN KEY (`train_id`) REFERENCES `trains` (`id`) ON DELETE CASCADE,
   CONSTRAINT `train_opts_ibfk_2` FOREIGN KEY (`opt_type`) REFERENCES `train_opt_types` (`id`) ON DELETE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COMMENT='options for train data'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='options for train data'
 ```
 
 </details>

@@ -15,7 +15,7 @@ CREATE TABLE `trains` (
   PRIMARY KEY (`id`),
   KEY `train_line_id` (`train_line_id`),
   CONSTRAINT `trains_ibfk_1` FOREIGN KEY (`train_line_id`) REFERENCES `train_lines` (`id`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=[Redacted by tbls] DEFAULT CHARSET=utf8mb3 COMMENT='train data'
+) ENGINE=InnoDB AUTO_INCREMENT=[Redacted by tbls] DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='train data'
 ```
 
 </details>

@@ -14,7 +14,7 @@ CREATE TABLE `train_opt_types` (
   `opt_description` text COMMENT 'option description',
   PRIMARY KEY (`id`),
   UNIQUE KEY `disp_name` (`disp_name`)
-) ENGINE=InnoDB AUTO_INCREMENT=[Redacted by tbls] DEFAULT CHARSET=utf8mb3 COMMENT='option types for train data'
+) ENGINE=InnoDB AUTO_INCREMENT=[Redacted by tbls] DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='option types for train data'
 ```
 
 </details>

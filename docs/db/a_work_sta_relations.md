@@ -19,7 +19,7 @@ CREATE TABLE `a_work_sta_relations` (
   CONSTRAINT `a_work_sta_relations_ibfk_1` FOREIGN KEY (`sta_time_from_id`) REFERENCES `sta_time` (`id`),
   CONSTRAINT `a_work_sta_relations_ibfk_2` FOREIGN KEY (`sta_time_to_id`) REFERENCES `sta_time` (`id`),
   CONSTRAINT `a_work_sta_relations_ibfk_3` FOREIGN KEY (`work_id`) REFERENCES `a_works` (`id`) ON DELETE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COMMENT='relation between work and stoppings'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='relation between work and stoppings'
 ```
 
 </details>

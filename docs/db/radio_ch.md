@@ -14,7 +14,7 @@ CREATE TABLE `radio_ch` (
   `ch_description` text COMMENT 'Radio channel description',
   PRIMARY KEY (`id`),
   UNIQUE KEY `ch_name` (`ch_name`)
-) ENGINE=InnoDB AUTO_INCREMENT=[Redacted by tbls] DEFAULT CHARSET=utf8mb3 COMMENT='Radio channel settings'
+) ENGINE=InnoDB AUTO_INCREMENT=[Redacted by tbls] DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='Radio channel settings'
 ```
 
 </details>

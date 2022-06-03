@@ -19,7 +19,7 @@ CREATE TABLE `station_stop_pos` (
   PRIMARY KEY (`id`),
   KEY `station_id` (`station_id`),
   CONSTRAINT `station_stop_pos_ibfk_1` FOREIGN KEY (`station_id`) REFERENCES `stations` (`id`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=[Redacted by tbls] DEFAULT CHARSET=utf8mb3 COMMENT='stop position of each station'
+) ENGINE=InnoDB AUTO_INCREMENT=[Redacted by tbls] DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='stop position of each station'
 ```
 
 </details>

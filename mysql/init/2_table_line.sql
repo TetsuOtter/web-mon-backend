@@ -79,7 +79,7 @@ CREATE TABLE perm_write_line (
 		ON DELETE CASCADE,
 
 	FOREIGN KEY (user_id)
-		REFERENCES users(id)
+		REFERENCES perm_read_line(user_id)
 		ON DELETE CASCADE
 );
 

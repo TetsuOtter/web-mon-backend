@@ -16,20 +16,6 @@ CREATE TABLE a_works (
 		ON DELETE CASCADE
 );
 
-CREATE TABLE a_work_car_relations (
-	a_work_id BIGINT UNSIGNED NOT NULL,
-	car_id BIGINT UNSIGNED NOT NULL,
-
-	PRIMARY KEY (a_work_id, car_id),
-
-	FOREIGN KEY (a_work_id)
-		REFERENCES a_works(id)
-		ON DELETE CASCADE,
-	FOREIGN KEY (car_id)
-		REFERENCES cars(id)
-		ON DELETE CASCADE
-);
-
 CREATE TABLE b_works (
 	id BIGINT UNSIGNED NOT NULL AUTO_INCREMENT UNIQUE PRIMARY KEY,
 	train_line_id BIGINT UNSIGNED NOT NULL,

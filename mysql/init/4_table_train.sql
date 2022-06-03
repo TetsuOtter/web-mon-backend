@@ -37,6 +37,9 @@ CREATE TABLE b_works (
 
 CREATE TABLE c_works LIKE b_works;
 ALTER TABLE c_works COMMENT 'C work (conductor works)';
+ALTER TABLE c_works ADD FOREIGN KEY (office_id)
+		REFERENCES offices(id) ON DELETE CASCADE;
+
 
 CREATE TABLE trains (
 	id BIGINT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY

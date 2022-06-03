@@ -72,3 +72,8 @@ ALTER TABLE b_work_sta_relations ADD FOREIGN KEY (work_id)
 		REFERENCES b_works(id) ON DELETE CASCADE;
 ALTER TABLE c_work_sta_relations ADD FOREIGN KEY (work_id)
 		REFERENCES c_works(id) ON DELETE CASCADE;
+
+ALTER TABLE b_work_sta_relations ADD FOREIGN KEY (sta_time_from_id) REFERENCES sta_time(id);
+ALTER TABLE b_work_sta_relations ADD FOREIGN KEY (sta_time_to_id) REFERENCES sta_time(id);
+ALTER TABLE c_work_sta_relations ADD FOREIGN KEY (sta_time_from_id) REFERENCES sta_time(id);
+ALTER TABLE c_work_sta_relations ADD FOREIGN KEY (sta_time_to_id) REFERENCES sta_time(id);

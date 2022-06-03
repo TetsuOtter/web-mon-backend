@@ -92,6 +92,11 @@ CREATE TABLE perm_read_line (
 ) COMMENT 'access allow users list';
 
 CREATE TABLE perm_write_line LIKE perm_read_line;
+ALTER TABLE perm_write_line ADD FOREIGN KEY (train_line_id)
+		REFERENCES train_lines(id) ON DELETE CASCADE;
+ALTER TABLE perm_write_line ADD FOREIGN KEY (user_id)
+		REFERENCES users(id) ON DELETE CASCADE;
+
 
 CREATE TABLE perm_password (
 	train_line_id BIGINT UNSIGNED NOT NULL

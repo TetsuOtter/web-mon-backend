@@ -34,13 +34,15 @@ CREATE TABLE sta_time (
 
 CREATE TABLE a_work_sta_relations (
 	work_id BIGINT UNSIGNED NOT NULL,
-	sta_id BIGINT UNSIGNED NOT NULL,
+	sta_time_from_id BIGINT UNSIGNED NOT NULL,
+	sta_time_to_id BIGINT UNSIGNED NOT NULL,
 
-	PRIMARY KEY (work_id, sta_id),
+	PRIMARY KEY (work_id, sta_time_from_id),
 
-	FOREIGN KEY (sta_id)
-		REFERENCES stations(id)
-		ON DELETE CASCADE
+	FOREIGN KEY (sta_time_from_id)
+		REFERENCES sta_time(id),
+	FOREIGN KEY (sta_time_to_id)
+		REFERENCES sta_time(id)
 );
 
 CREATE TABLE b_work_sta_relations LIKE a_work_sta_relations;

@@ -1,0 +1,9 @@
+dsn: mysql://test:test@127.0.0.1:3306/webmon
+
+docPath: docs/db
+
+name: WebMON Database
+desc: A database that stores each WebMON data.  For authentication functionary, it is expected that an external IDaaS to be used, such as Firebase Authentication.
+
+format:
+  number: true

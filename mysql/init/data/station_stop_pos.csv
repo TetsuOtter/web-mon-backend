@@ -1,0 +1,6 @@
+id,station_id,pos_name,track_name_short,stop_pos_location,run_in_limit,run_out_limit
+1,1,駅1停目A,1-A,0.1,50,60
+2,2,駅2停目A,2-A,1.1,50,60
+3,3,駅3停目A,3-A,2.1,50,60
+4,4,駅4停目A,4-A,3.1,50,60
+5,1,駅1停目B,1-B,0.2,30,70

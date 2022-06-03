@@ -3,7 +3,7 @@ USE webmon;
 CREATE TABLE radio_ch (
 	id BIGINT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
 	ch_name VARCHAR(4) UNIQUE NOT NULL,
-	ch_discription TEXT
+	ch_description TEXT
 );
 
 CREATE TABLE sta_time (

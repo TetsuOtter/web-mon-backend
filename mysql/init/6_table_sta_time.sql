@@ -7,6 +7,7 @@ CREATE TABLE radio_ch (
 );
 
 CREATE TABLE sta_time (
+	id BIGINT UNSIGNED NOT NULL AUTO_INCREMENT UNIQUE PRIMARY KEY,
 	train_id BIGINT UNSIGNED NOT NULL,
 	stop_pos_id BIGINT UNSIGNED NOT NULL,
 	arr_time TIME CHECK (arr_time >= '00:00:00'),
@@ -17,7 +18,7 @@ CREATE TABLE sta_time (
 	sta_color CHAR(8) NOT NULL,
 	line_color CHAR(8) NOT NULL,
 
-	PRIMARY KEY (train_id, stop_pos_id),
+	UNIQUE (train_id, stop_pos_id),
 
 	FOREIGN KEY (train_id)
 		REFERENCES trains(id)

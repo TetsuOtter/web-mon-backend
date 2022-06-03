@@ -20,7 +20,6 @@ CREATE TABLE b_works (
 	id BIGINT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
 	office_id BIGINT UNSIGNED NOT NULL,
 	work_name VARCHAR(64) NOT NULL,
-	is_no_work BIT(1) NOT NULL,
 
 	UNIQUE(office_id, work_name),
 

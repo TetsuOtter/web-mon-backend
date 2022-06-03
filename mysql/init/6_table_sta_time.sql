@@ -36,6 +36,7 @@ CREATE TABLE a_work_sta_relations (
 	work_id BIGINT UNSIGNED NOT NULL,
 	sta_time_from_id BIGINT UNSIGNED NOT NULL,
 	sta_time_to_id BIGINT UNSIGNED NOT NULL,
+	is_no_work BIT(1) NOT NULL,
 
 	PRIMARY KEY (work_id, sta_time_from_id),
 

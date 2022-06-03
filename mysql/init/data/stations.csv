@@ -1,0 +1,5 @@
+id,train_line_id,station_name,name_short,sta_location
+1,1,駅1_XXXX,駅1,0.0
+2,1,駅2_XXXX,駅2,1.0
+3,1,駅3_XXXX,駅3,2.0
+4,1,駅4_XXXX,駅4,3.0

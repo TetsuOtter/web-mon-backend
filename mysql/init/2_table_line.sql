@@ -68,20 +68,7 @@ CREATE TABLE perm_read_line (
 		ON DELETE CASCADE
 );
 
-CREATE TABLE perm_write_line (
-	train_line_id BIGINT UNSIGNED NOT NULL,
-	user_id VARCHAR(128) NOT NULL,
-
-	PRIMARY KEY (train_line_id, user_id),
-
-	FOREIGN KEY (train_line_id)
-		REFERENCES train_lines(id)
-		ON DELETE CASCADE,
-
-	FOREIGN KEY (user_id)
-		REFERENCES perm_read_line(user_id)
-		ON DELETE CASCADE
-);
+CREATE TABLE perm_write_line LIKE perm_read_line;
 
 CREATE TABLE perm_password (
 	train_line_id BIGINT UNSIGNED NOT NULL,

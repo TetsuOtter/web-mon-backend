@@ -2,14 +2,14 @@ USE webmon;
 
 CREATE TABLE a_works (
 	id BIGINT UNSIGNED NOT NULL AUTO_INCREMENT UNIQUE PRIMARY KEY,
-	train_line_id BIGINT UNSIGNED NOT NULL,
+	office_id BIGINT UNSIGNED NOT NULL,
 	work_name VARCHAR(64) NOT NULL,
 	car_type_id BIGINT UNSIGNED NOT NULL,
 
-	UNIQUE(train_line_id, work_name),
+	UNIQUE(office_id, work_name),
 
-	FOREIGN KEY (train_line_id)
-		REFERENCES train_lines(id)
+	FOREIGN KEY (office_id)
+		REFERENCES offices(id)
 		ON DELETE CASCADE,
 	FOREIGN KEY (car_type_id)
 		REFERENCES car_types(id)
@@ -18,14 +18,14 @@ CREATE TABLE a_works (
 
 CREATE TABLE b_works (
 	id BIGINT UNSIGNED NOT NULL AUTO_INCREMENT UNIQUE PRIMARY KEY,
-	train_line_id BIGINT UNSIGNED NOT NULL,
+	office_id BIGINT UNSIGNED NOT NULL,
 	work_name VARCHAR(64) NOT NULL,
 	is_no_work BIT(1) NOT NULL,
 
-	UNIQUE(train_line_id, work_name),
+	UNIQUE(office_id, work_name),
 
-	FOREIGN KEY (train_line_id)
-		REFERENCES train_lines(id)
+	FOREIGN KEY (office_id)
+		REFERENCES offices(id)
 		ON DELETE CASCADE
 );
 

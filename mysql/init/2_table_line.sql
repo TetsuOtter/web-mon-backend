@@ -30,6 +30,9 @@ CREATE TABLE line_tag_relations (
 
 	PRIMARY KEY (tag_id, train_line_id),
 
+	FOREIGN KEY (tag_id)
+		REFERENCES line_tag_names(id)
+		ON DELETE CASCADE,
 	FOREIGN KEY (train_line_id)
 		REFERENCES train_lines(id)
 		ON DELETE CASCADE
